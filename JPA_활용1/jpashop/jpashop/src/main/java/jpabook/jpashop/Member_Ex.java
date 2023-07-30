@@ -1,3 +1,4 @@
+/*
 package jpabook.jpashop;
 
 import lombok.Getter;
@@ -10,7 +11,7 @@ import javax.persistence.Id;
 @Entity
 @Getter
 @Setter
-public class Member {
+public class Member_Ex {
 
     @Id
     @GeneratedValue
@@ -18,3 +19,4 @@ public class Member {
     private String username;
 
 }
+*/
