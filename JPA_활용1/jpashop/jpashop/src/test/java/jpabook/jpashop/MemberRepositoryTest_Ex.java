@@ -1,3 +1,4 @@
+/*
 package jpabook.jpashop;
 
 import org.assertj.core.api.Assertions;
@@ -9,26 +10,24 @@ import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
 
-import static org.junit.Assert.*;
-
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class MemberRepositoryTest {
+public class MemberRepositoryTest_Ex {
 
     @Autowired
-    MemberRepository memberRepository;
+    MemberRepository_Ex memberRepository;
     
     @Test
     @Transactional
     @Rollback(false)
     public void testMember() throws Exception {
         //given
-        Member member = new Member();
+        Member_Ex member = new Member_Ex();
         member.setUsername("memberA");
 
         //when
         Long savedId = memberRepository.save(member);
-        Member findMember = memberRepository.find(savedId);
+        Member_Ex findMember = memberRepository.find(savedId);
 
         //then
         Assertions.assertThat(findMember.getId()).isEqualTo(member.getId());
@@ -38,4 +37,4 @@ public class MemberRepositoryTest {
         Assertions.assertThat(findMember).isEqualTo(member);
         System.out.println("findMember == member : " +(findMember == member));
     }
-}
+}*/
